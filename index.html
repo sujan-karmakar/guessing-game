@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    
+    <div class="container">
+        <h1>Guess The Number</h1>
+        
+        <!-- Setup Section -->
+        <div id="setup-area">
+            <p class="subtitle">Enter the maximum number for the range</p>
+            <div class="game-area">
+                <div class="input-container">
+                    <input type="number" id="maxRangeInput" placeholder="Enter max range" min="2">
+                    <div class="spin-arrows">
+                        <button class="spin-btn up" data-target="maxRangeInput">▲</button>
+                        <button class="spin-btn down" data-target="maxRangeInput">▼</button>
+                    </div>
+                </div>
+                <button id="setRangeBtn">Start Game</button>
+            </div>
+        </div>
+
+        <!-- Game Section -->
+        <div id="play-area" class="hidden">
+            <p class="subtitle" id="rangeText">Pick a number between 1 and 100</p>
+            
+            <div class="game-area">
+                <div class="input-container">
+                    <input type="number" id="guessInput" placeholder="Enter your guess" min="1">
+                    <div class="spin-arrows">
+                        <button class="spin-btn up" data-target="guessInput">▲</button>
+                        <button class="spin-btn down" data-target="guessInput">▼</button>
+                    </div>
+                </div>
+                <button id="submitBtn">Guess</button>
+            </div>
+
+            <div class="message-area">
+                <p id="message">Good luck!</p>
+                <p id="attempts">Attempts: 0</p>
+            </div>
+
+            <button id="restartBtn" class="hidden">Play Again</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
